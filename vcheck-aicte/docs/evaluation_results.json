@@ -1,0 +1,1154 @@
+{
+  "summary": {
+    "generated_on": "2026-10-22",
+    "cases_total": 43,
+    "deterministic_total": 37,
+    "deterministic_passed": 37,
+    "ocr_dependent_total": 6,
+    "ocr_dependent_passed": 6,
+    "files_total": 165
+  },
+  "cases": [
+    {
+      "case_id": "C01",
+      "title": "Complete, consistent application (digital PDFs)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [],
+      "actual": {},
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C02",
+      "title": "Complete application, all four documents as scanned PDFs",
+      "kind": "ocr_dependent",
+      "passed": true,
+      "expected": [],
+      "actual": {},
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 6.4,
+      "note": "Clean 150-dpi renders: OCR is expected to read these correctly."
+    },
+    {
+      "case_id": "C03",
+      "title": "Complete application in mixed formats (PNG, JPEG, scanned PDF, digital PDF)",
+      "kind": "ocr_dependent",
+      "passed": true,
+      "expected": [],
+      "actual": {},
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 4.7,
+      "note": ""
+    },
+    {
+      "case_id": "C04",
+      "title": "Abbreviated institution name on documents ('Inst. of Tech.') must NOT raise a flag",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [],
+      "actual": {},
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C05",
+      "title": "Missing occupancy certificate",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "REQ-DOC-001"
+      ],
+      "actual": {
+        "REQ-DOC-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "REQ-DOC-001"
+      ],
+      "n_files": 3,
+      "doc_status": {
+        "processed": 3
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C06",
+      "title": "Missing affiliation letter",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "REQ-DOC-003"
+      ],
+      "actual": {
+        "REQ-DOC-003": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "REQ-DOC-003"
+      ],
+      "n_files": 3,
+      "doc_status": {
+        "processed": 3
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C07",
+      "title": "Missing government approval",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "REQ-DOC-004"
+      ],
+      "actual": {
+        "REQ-DOC-004": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "REQ-DOC-004"
+      ],
+      "n_files": 3,
+      "doc_status": {
+        "processed": 3
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C08",
+      "title": "Only the approval letter uploaded",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "REQ-DOC-001",
+        "REQ-DOC-003",
+        "REQ-DOC-004"
+      ],
+      "actual": {
+        "REQ-DOC-001": 1,
+        "REQ-DOC-003": 1,
+        "REQ-DOC-004": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "REQ-DOC-001",
+        "REQ-DOC-003",
+        "REQ-DOC-004"
+      ],
+      "n_files": 1,
+      "doc_status": {
+        "processed": 1
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C09",
+      "title": "Expired affiliation letter",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "DATE-002"
+      ],
+      "actual": {
+        "DATE-002": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "DATE-002"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C10",
+      "title": "Contradictory dates (issued after validity end)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "DATE-002",
+        "DATE-003"
+      ],
+      "actual": {
+        "DATE-002": 1,
+        "DATE-003": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "DATE-002",
+        "DATE-003"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C11",
+      "title": "Issue date in the future",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "DATE-004"
+      ],
+      "actual": {
+        "DATE-004": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C12",
+      "title": "Impossible calendar date (31-02-2026)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "DATE-001"
+      ],
+      "actual": {
+        "DATE-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "DATE-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C13",
+      "title": "Different institution name on occupancy certificate",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "XD-001"
+      ],
+      "actual": {
+        "XD-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "XD-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C14",
+      "title": "Near-identical institution name (spelling variant) -> review, not failure",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "XD-001"
+      ],
+      "actual": {
+        "XD-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C15",
+      "title": "Institution identifier mismatch",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "XD-002"
+      ],
+      "actual": {
+        "XD-002": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "XD-002"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C16",
+      "title": "Identifier differs only by OCR-confusable characters (O vs 0)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "XD-002"
+      ],
+      "actual": {
+        "XD-002": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C17",
+      "title": "Intake conflict (document 120 vs application 180)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "XD-005"
+      ],
+      "actual": {
+        "XD-005": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "XD-005"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C18",
+      "title": "Course on affiliation letter not in application",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "XD-004"
+      ],
+      "actual": {
+        "XD-004": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "XD-004"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C19",
+      "title": "Two occupancy certificates with different numbers",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "DUP-004",
+        "XD-006"
+      ],
+      "actual": {
+        "DUP-004": 1,
+        "XD-006": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 5,
+      "doc_status": {
+        "processed": 5
+      },
+      "seconds": 0.0,
+      "note": "Second certificate differs only in its number. AMENDED after measurement: originally expected {XD-006} only, under an a-priori 0.9 similarity threshold that measurement showed would miss this (similarity 0.855)."
+    },
+    {
+      "case_id": "C20",
+      "title": "Approval letter refers to a different application",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "XD-003"
+      ],
+      "actual": {
+        "XD-003": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "XD-003"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C21",
+      "title": "Same occupancy certificate file uploaded twice",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "DUP-001"
+      ],
+      "actual": {
+        "DUP-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "DUP-001"
+      ],
+      "n_files": 5,
+      "doc_status": {
+        "processed": 5
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C22",
+      "title": "Exact file reused from another institution's application",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "DUP-002",
+        "XD-001"
+      ],
+      "actual": {
+        "DUP-002": 1,
+        "XD-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "XD-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C23",
+      "title": "Another institution's certificate re-saved as an image (different bytes, same content)",
+      "kind": "ocr_dependent",
+      "passed": true,
+      "expected": [
+        "DUP-003",
+        "DUP-004",
+        "XD-001"
+      ],
+      "actual": {
+        "DUP-003": 1,
+        "DUP-004": 1,
+        "XD-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 1.3,
+      "note": "Content reused in a new file format; found through text, not hashes. AMENDED after measurement: DUP-004 added once the threshold was set to 0.80."
+    },
+    {
+      "case_id": "C25",
+      "title": "Executable renamed to .pdf",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "actual": {
+        "REQ-DOC-001": 1,
+        "SYS-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 3,
+        "rejected": 1
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C26",
+      "title": "PNG image named .pdf (extension mismatch)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "actual": {
+        "REQ-DOC-001": 1,
+        "SYS-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 3,
+        "rejected": 1
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C27",
+      "title": "Truncated (corrupt) PDF",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "actual": {
+        "REQ-DOC-001": 1,
+        "SYS-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 3,
+        "rejected": 1
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C28",
+      "title": "File larger than the upload limit",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "actual": {
+        "REQ-DOC-001": 1,
+        "SYS-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 3,
+        "rejected": 1
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C29",
+      "title": "Empty file",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "actual": {
+        "REQ-DOC-001": 1,
+        "SYS-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "REQ-DOC-001",
+        "SYS-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 3,
+        "rejected": 1
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C30",
+      "title": "Unreadable scan (heavy blur and noise)",
+      "kind": "ocr_dependent",
+      "passed": true,
+      "expected": [
+        "SYS-002"
+      ],
+      "actual": {
+        "SYS-002": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 3,
+        "unreadable": 1
+      },
+      "seconds": 31.0,
+      "note": "Expected to yield no usable text; routed to manual review."
+    },
+    {
+      "case_id": "C31",
+      "title": "Slightly rotated, noisy scan",
+      "kind": "ocr_dependent",
+      "passed": true,
+      "expected": [],
+      "actual": {
+        "FLD-002": 1,
+        "FLD-006": 1,
+        "XD-004": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [
+        "FLD-002",
+        "FLD-006",
+        "XD-004"
+      ],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 3.5,
+      "note": "OCR misreads must produce review items, never hard failures."
+    },
+    {
+      "case_id": "C32",
+      "title": "Low-resolution blurry JPEG",
+      "kind": "ocr_dependent",
+      "passed": true,
+      "expected": [],
+      "actual": {
+        "SYS-002": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [
+        "SYS-002"
+      ],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 3,
+        "unreadable": 1
+      },
+      "seconds": 4.5,
+      "note": "Result depends on OCR; recorded as measured. Hard failures here would indicate over-confidence."
+    },
+    {
+      "case_id": "C33",
+      "title": "Verification source unavailable",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "VER-001"
+      ],
+      "actual": {
+        "VER-001": 4
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C34",
+      "title": "Simulated registry holds a different identifier for the affiliation letter",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "VER-001"
+      ],
+      "actual": {
+        "VER-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C35",
+      "title": "Simulated registry confirms every document (labelled simulation, not 'verified')",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [],
+      "actual": {},
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C36",
+      "title": "PDF produced by an image editor (metadata anomaly)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "META-001"
+      ],
+      "actual": {
+        "META-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C37",
+      "title": "PDF containing JavaScript",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "META-002"
+      ],
+      "actual": {
+        "META-002": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C38",
+      "title": "Application has no institution identifier",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "APP-001"
+      ],
+      "actual": {
+        "APP-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "APP-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C39",
+      "title": "Negative intake entered in the application",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "NUM-001"
+      ],
+      "actual": {
+        "NUM-001": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "NUM-001"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C40",
+      "title": "Institution identifier in the wrong format (consistently)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "APP-002"
+      ],
+      "actual": {
+        "APP-002": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "APP-002"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C41",
+      "title": "Certificate number missing on a digital certificate",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "FLD-003"
+      ],
+      "actual": {
+        "FLD-003": 1
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "FLD-003"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C42",
+      "title": "Occupancy and affiliation documents uploaded under each other's category",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "FLD-002",
+        "FLD-005",
+        "FLD-006",
+        "SYS-004"
+      ],
+      "actual": {
+        "FLD-002": 1,
+        "FLD-005": 1,
+        "FLD-006": 1,
+        "SYS-004": 2
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "FLD-002",
+        "FLD-005",
+        "FLD-006"
+      ],
+      "n_files": 4,
+      "doc_status": {
+        "processed": 4
+      },
+      "seconds": 0.1,
+      "note": ""
+    },
+    {
+      "case_id": "C43",
+      "title": "Several problems at once (wrong id + expired + missing document)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [
+        "DATE-002",
+        "REQ-DOC-001",
+        "XD-002"
+      ],
+      "actual": {
+        "DATE-002": 1,
+        "REQ-DOC-001": 1,
+        "XD-002": 2
+      },
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [
+        "DATE-002",
+        "REQ-DOC-001",
+        "XD-002",
+        "XD-002"
+      ],
+      "n_files": 3,
+      "doc_status": {
+        "processed": 3
+      },
+      "seconds": 0.0,
+      "note": ""
+    },
+    {
+      "case_id": "C44",
+      "title": "Different checklist for a 'new institution' application (only two documents required)",
+      "kind": "deterministic",
+      "passed": true,
+      "expected": [],
+      "actual": {},
+      "missing": [],
+      "unexpected": [],
+      "extra_allowed_ocr": [],
+      "hard_failures": [],
+      "n_files": 2,
+      "doc_status": {
+        "processed": 2
+      },
+      "seconds": 0.0,
+      "note": ""
+    }
+  ],
+  "extraction_accuracy": [
+    {
+      "mode": "digital PDF (text layer)",
+      "fields_total": 27,
+      "correct": 27,
+      "wrong_value": 0,
+      "missing": 0,
+      "in_unreadable_documents": 0,
+      "documents_unreadable": "0/4",
+      "accuracy_of_all_fields": 1.0,
+      "mean_ocr_confidence": null,
+      "wrong_value_confidences": [],
+      "missed_by_field": {},
+      "seconds": 0.0
+    },
+    {
+      "mode": "scanned PDF, clean 150 dpi",
+      "fields_total": 27,
+      "correct": 27,
+      "wrong_value": 0,
+      "missing": 0,
+      "in_unreadable_documents": 0,
+      "documents_unreadable": "0/4",
+      "accuracy_of_all_fields": 1.0,
+      "mean_ocr_confidence": 0.951,
+      "wrong_value_confidences": [],
+      "missed_by_field": {},
+      "seconds": 6.7
+    },
+    {
+      "mode": "PNG, clean 150 dpi",
+      "fields_total": 27,
+      "correct": 27,
+      "wrong_value": 0,
+      "missing": 0,
+      "in_unreadable_documents": 0,
+      "documents_unreadable": "0/4",
+      "accuracy_of_all_fields": 1.0,
+      "mean_ocr_confidence": 0.951,
+      "wrong_value_confidences": [],
+      "missed_by_field": {},
+      "seconds": 6.2
+    },
+    {
+      "mode": "JPEG q70, clean 150 dpi",
+      "fields_total": 27,
+      "correct": 27,
+      "wrong_value": 0,
+      "missing": 0,
+      "in_unreadable_documents": 0,
+      "documents_unreadable": "0/4",
+      "accuracy_of_all_fields": 1.0,
+      "mean_ocr_confidence": 0.953,
+      "wrong_value_confidences": [],
+      "missed_by_field": {},
+      "seconds": 6.1
+    },
+    {
+      "mode": "PNG rotated 2 deg + noise",
+      "fields_total": 27,
+      "correct": 16,
+      "wrong_value": 6,
+      "missing": 5,
+      "in_unreadable_documents": 0,
+      "documents_unreadable": "0/4",
+      "accuracy_of_all_fields": 0.593,
+      "mean_ocr_confidence": 0.855,
+      "wrong_value_confidences": [
+        0.52,
+        0.6,
+        0.82,
+        0.82,
+        0.83,
+        0.88
+      ],
+      "missed_by_field": {
+        "institution_id": 2,
+        "application_ref": 1,
+        "certificate_number": 2,
+        "issue_date": 3,
+        "approved_intake": 2,
+        "course_name": 1
+      },
+      "seconds": 11.8
+    },
+    {
+      "mode": "JPEG 70 dpi + blur 1.2",
+      "fields_total": 27,
+      "correct": 0,
+      "wrong_value": 0,
+      "missing": 9,
+      "in_unreadable_documents": 18,
+      "documents_unreadable": "2/4",
+      "accuracy_of_all_fields": 0.0,
+      "mean_ocr_confidence": 0.399,
+      "wrong_value_confidences": [],
+      "missed_by_field": {
+        "institution_name": 2,
+        "certificate_number": 2,
+        "issue_date": 2,
+        "expiry_date": 1,
+        "course_name": 2
+      },
+      "seconds": 15.4
+    }
+  ],
+  "ruleset": {
+    "id": "demo-eoa",
+    "version": "1.0.0",
+    "rules": 34
+  }
+}

@@ -1,0 +1,2 @@
+# Only needed to run the browser (UI) tests:  pip install -r requirements-dev.txt ; playwright install chromium
+playwright>=1.45

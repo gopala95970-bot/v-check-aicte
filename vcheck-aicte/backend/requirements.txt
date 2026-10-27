@@ -1,0 +1,14 @@
+# Engine (all free / open source). Versions are those the tests were run with.
+pypdf==5.9.0
+Pillow>=11,<13
+numpy>=2,<3
+opencv-python-headless>=4.9
+pytesseract>=0.3.10
+PyJWT>=2.7
+
+# Needed only to REGENERATE the synthetic documents
+reportlab>=4.0
+
+
+# The API layer (backend/vcheck_api) uses only the standard library plus PyJWT above:
+# no FastAPI/SQLAlchemy/uvicorn needed. (Planned, optional: fastapi, uvicorn, sqlalchemy, alembic, psycopg.)
