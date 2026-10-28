@@ -1,9 +1,10 @@
-# One-click deploy on Render (free web service): New > Blueprint > pick this repository.
 services:
   - type: web
     name: vcheck-aicte
     runtime: docker
     plan: free
+    dockerfilePath: ./vcheck-aicte/Dockerfile
+    dockerContext: ./vcheck-aicte
     healthCheckPath: /api/v1/health
     envVars:
       - key: JWT_SECRET
